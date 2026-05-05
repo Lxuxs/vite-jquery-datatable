@@ -6,3 +6,4 @@
 * clonar
 * npm install 
 
+listo
