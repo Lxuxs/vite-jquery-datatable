@@ -3,7 +3,7 @@ import DataTable from 'datatables.net-dt';
 import 'datatables.net-dt/css/dataTables.dataTables.css';
 
 
-const API_URL = "https://lxuxs.github.io/vite-jquery-datatable/"; 
+const API_URL = "https://raw.githubusercontent.com/Lxuxs/vite-jquery-datatable/main/models.json"; 
 
 async function cargarDatos() {
   try {
