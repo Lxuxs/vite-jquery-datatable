@@ -2,7 +2,8 @@ import './style.css';
 import DataTable from 'datatables.net-dt';
 import 'datatables.net-dt/css/dataTables.dataTables.css';
 
-const API_URL = "https://raw.githubusercontent.com/PlataformasWeb-P-AA2026/api-demo/main/db.json"
+
+const API_URL = "./models.json"; 
 
 async function cargarDatos() {
   try {
@@ -15,12 +16,21 @@ async function cargarDatos() {
     const datos = await respuesta.json();
 
     new DataTable('#tabla-posts', {
-      data: datos,
+      
+      data: datos.marcas, 
+      
+      
       columns: [
-        { data: 'AMIE' },
-        { data: 'Nombre-Educativa' },
-        { data: 'Canton' },
-        { data: 'Parroquia' }
+        { data: 'id', title: 'ID' },
+        { data: 'nombre', title: 'Marca de Vehículo' },
+        { 
+          data: 'modelos', 
+          title: 'Modelos Disponibles',
+          
+          render: function(data) {
+            return data.join(', ');
+          }
+        }
       ],
       pageLength: 10,
       language: {

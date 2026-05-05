@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-jquery-datatable</title>
+    <title>Vite + DataTables Vehículos</title>
   </head>
   <body>
     <div id="app">
-        <h1>Posts desde API JSON</h1>
+        <h1>Catálogo de Marcas y Modelos</h1>
 
-          <table id="tabla-posts" class="display">
+        <!-- Ajustamos los encabezados para que coincidan con models.json -->
+        <table id="tabla-posts" class="display" style="width:100%">
             <thead>
               <tr>
-                <th>Código AMIE</th>
-                <th>Institución</th>
-                <th>Cantón</th>
-                <th>Parroquia</th>
+                <th>ID</th>
+                <th>Marca de Vehículo</th>
+                <th>Modelos Disponibles</th>
               </tr>
             </thead>
-            <tbody></tbody>
-          </table>
+            <tbody>
+                <!-- DataTables cargará los datos de models.json aquí -->
+            </tbody>
+        </table>
 
     </div>
     <script type="module" src="/src/main.js"></script>
